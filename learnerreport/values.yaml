@@ -1,0 +1,66 @@
+backend:
+  appName: backend
+  namespace: helm
+  replicaCount: 2
+  container:
+    appName: backend
+    labelName: backend
+    port: 3001
+  image:
+    repository: ranyabrkumar/helm-backend
+    tag: "latest"
+
+  env:
+    - name: ATLAS_URI
+      value: "mongodb+srv://ranyabrkumar:q6gL9MDzZiW291fC@ranya-cluster.auw6kfz.mongodb.net/?retryWrites=true&w=majority&appName=Ranya-cluster"
+    - name: HASH_KEY
+      value: "fce5dbe91f227224cb1e183057f95c62cc12c0b722efeee824ad29564d654d7e"
+    - name: JWT_SECRET_KEY
+      value: "bb2e8d3843e9f20e8fb64ea859b3fcb9cb1dad055b309d00debb304ab75e63f701ad4c5f32524a0176a6f8d7
+  b45a79f1bf87b90028c280a2e24cac0cd1f9ca8f"      
+
+  service:
+    name: backend
+    type: ClusterIP
+    port: 3001
+    targetPort: 3001
+
+frontend:
+  appName: frontend
+  namespace: helm
+  replicaCount: 2
+  container:
+    appName: frontend
+    labelName: frontend
+    port: 3000
+  image:
+    repository: ranyabrkumar/helm-frontend
+    tag: "latest"
+
+  env:
+    - name: REACT_APP_API_URL
+      value: "http://backend:3001"
+
+  service:
+    name: frontend
+    type: LoadBalancer
+    port: 80
+    targetPort: 3000
+    container_port: 30000
+
+mongo:
+  appName: mongo
+  namespace: helm
+  replicaCount: 1
+  container:
+    appName: mongo
+    labelName: mongo
+    port: 27017
+  image:
+    repository: mongo
+    tag: "latest"
+  service:
+    name: mongo
+    type: ClusterIP
+    port: 27017
+    targetPort: 27017
