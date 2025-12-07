@@ -14,7 +14,7 @@ spec:
         spec:
             containers:
               - name: backend
-                image: ranyabrkumar/helm-backend:latest
+                image: robintyagi27/helm-backend:latest
                 ports:
                   - containerPort: 3001
                 env:
