@@ -14,7 +14,7 @@ spec:
         spec:
             containers:
             - name: frontend
-              image: ranyabrkumar/helm-frontend:latest
+              image: robintyagi27/helm-frontend:latest
               ports:
               - containerPort: 3000
               env:
