@@ -6,7 +6,7 @@ container:
   labelName: frontend
   port: 3000
 image:
-  repository: ranyabrkumar/helm-frontend
+  repository: robintyagi27/helm-frontend
   tag: "latest"
 
 env:
