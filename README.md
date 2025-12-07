@@ -101,14 +101,16 @@ Stages in `Jenkinsfile`:
 - **Logs**: `kubectl logs <pod-name>`
 ---
   **pod details**
-![SVC_details](https://github.com/user-attachments/assets/1b46d3bf-27be-40f5-8860-efe8c4072e24)
-![Pods_details](https://github.com/user-attachments/assets/cac1dbf2-91cb-4185-8132-f905b8abac01)
-![pod_logs](https://github.com/user-attachments/assets/e6de541d-c943-47cf-b076-cc7e76d951d0)
+![Pods_details](https://github.com/user-attachments/assets/1197a6be-cad6-4174-a541-a6653e12de73)
+
+![pod_logs](https://github.com/user-attachments/assets/85d6faee-6b7c-4467-8a73-0d2b93fc36e9)
+
+![SVC_details](https://github.com/user-attachments/assets/74952442-27cf-421a-a17e-87e27501efe7)
 
 ---
 **HELM Chart**
-![helm_chart_deployment_v2](https://github.com/user-attachments/assets/5058726a-4ea0-4318-9ce3-d8f8a748a5fb)
-![helm_chart_deployment](https://github.com/user-attachments/assets/d54ed3b4-78b9-4013-9606-7f9bc2a7ccaa)
+![helm_chart_deployment](https://github.com/user-attachments/assets/857a8fc4-7a71-4242-b537-00b9e6368cb4)
+![helm_chart_deployment_v2](https://github.com/user-attachments/assets/3a7c5135-50ae-4afc-af62-8a2f2dc3902b)
 
 ---
 **Frontend deployed by K8s**
